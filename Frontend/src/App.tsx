@@ -1,7 +1,9 @@
+import QuizPage from  './pages/quiz';
+
 function App() {
-  return <>
-    <div className="text-3xl font-bold underline">Astrophoto Quiz</div>
-  </>
+  return (
+    <QuizPage />
+  )
 }
 
 export default App
