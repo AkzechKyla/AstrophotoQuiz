@@ -36,26 +36,28 @@ function QuizPage() {
         setUserExplanation('');
     }
 
-    return <div>
-        <h1 className='font-bold'>Level {level}</h1>
-        <div className='rounded-lg p-5 m-5 bg-[#36393e] h-96'>
-            <img
-                src={questions[level - 1].image} // edit
-                alt="Flashcard Question"
-                className='object-cover w-full h-full rounded-lg'
-            />
+    return <div className='bg-[#282b30] p-8 text-center text-white flex flex-col justify-start items-center h-full w-full min-h-screen'>
+        <div className='flex flex-col justify-center items-center'>
+            <h1 className='font-bold'>Level {level}</h1>
+            <div className='rounded-lg p-5 m-5 bg-[#36393e] h-96'>
+                <img
+                    src={questions[level - 1].image} // edit
+                    alt="Flashcard Question"
+                    className='object-cover w-full h-full rounded-lg'
+                />
+            </div>
+            {
+                isCorrect ? <ExplanationBox
+                    userExplanation={userExplanation}
+                    setUserExplanation={setUserExplanation}
+                    handleSubmit={handleSubmitExplanation}
+                /> : <AnswerBox
+                    userAnswer={userAnswer}
+                    setUserAnswer={setUserAnswer}
+                    handleSubmit={handleSubmitAnswer}
+                />
+            }
         </div>
-        {
-            isCorrect ? <ExplanationBox
-                userExplanation={userExplanation}
-                setUserExplanation={setUserExplanation}
-                handleSubmit={handleSubmitExplanation}
-            /> : <AnswerBox
-                userAnswer={userAnswer}
-                setUserAnswer={setUserAnswer}
-                handleSubmit={handleSubmitAnswer}
-            />
-        }
     </div>;
 }
 

@@ -17,7 +17,7 @@ function ExplanationBox(props: ExplanationBoxProps) {
         onKeyDown={(event) => {
           if (event.key === 'Enter') props.handleSubmit();
         }}
-        className='w-4/5 p-2.5 m-2.5 text-base rounded-md border text-black'
+        className='w-11/12 p-2.5 m-2.5 text-base rounded-md border text-black'
       />
       <SubmitButton handleSubmit={props.handleSubmit}/>
   </>

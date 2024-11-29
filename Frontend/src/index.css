@@ -2,12 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    background-color: #282b30;
-    padding: 2rem;
-    text-align: center;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
 }
