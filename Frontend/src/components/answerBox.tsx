@@ -12,7 +12,7 @@ function AnswerBox({ userAnswer, setUserAnswer, handleSubmit }: AnswerBoxProps) 
     autoFocus
     type="text"
     placeholder="Type your answer..."
-    value={userAnswer.trim()}
+    value={userAnswer}
     onChange={(e) => setUserAnswer(e.target.value)}
     onKeyDown={(event) => {
       if (event.key === 'Enter') handleSubmit();

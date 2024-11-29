@@ -10,9 +10,8 @@ function ExplanationBox(props: ExplanationBoxProps) {
   return <>
       <p>Explain the logic behind your answer</p>
       <textarea
-        autoFocus
         placeholder="Explain your answer..."
-        value={props.userExplanation.trim()}
+        value={props.userExplanation}
         onChange={(e) => props.setUserExplanation(e.target.value)}
         onKeyDown={(event) => {
           if (event.key === 'Enter') props.handleSubmit();
